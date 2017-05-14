@@ -15,19 +15,6 @@ namespace BeautifulMap_WebApi_Dnc.Controllers
         [HttpGet("{theme}/{z}/{x}/{y}")]
         public IActionResult Get(string theme, int z, int x, int y)
         {
-            //MapModel mapModel = mapModelManager.Dequeue(theme, () =>
-            //{
-            //    string themeFilename = char.ToUpper(theme[0]) + theme.Substring(1);
-            //    CssDocument cssDoc = CssDocument.Load($@"Themes\{themeFilename}Theme.sgcss");
-            //    LayerGroup layerGroup = new LayerGroup();
-            //    layerGroup.LoadStyledLayers("AppData", cssDoc);
-
-            //    MapModel tempMapModel = new MapModel(GeoUnit.Meter);
-            //    tempMapModel.Layers.AddRange(layerGroup.Layers);
-            //    return tempMapModel;
-            //});
-            //return new XyzTileResult(mapModel, x, y, z);
-
             string themeFilename = char.ToUpper(theme[0]) + theme.Substring(1);
             CssDocument cssDoc = CssDocument.Load($@"Themes\{themeFilename}Theme.sgcss");
             LayerGroup layerGroup = new LayerGroup();
